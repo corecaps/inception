@@ -18,5 +18,5 @@ mysql -e "GRANT ALL PRIVILEGES ON *.* TO root@localhost;"
 mysql -e "ALTER USER root@localhost IDENTIFIED BY '1234';"
 mysql -u root -p1234 -e "FLUSH PRIVILEGES;"
 mysqladmin -u root -p1234 shutdown
-#exec /usr/sbin/mysqld --user=mysql --console
+exec /usr/sbin/mysqld --user=mysql --console
 

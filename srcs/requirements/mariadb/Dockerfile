@@ -11,4 +11,4 @@ RUN 	apt-get -y update && \
 COPY conf/mysql.conf /etc/mysql/my.cnf
 COPY tools/mariadb.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/mariadb.sh
-#RUN /usr/local/bin/mariadb.sh
+CMD /usr/local/bin/mariadb.sh
