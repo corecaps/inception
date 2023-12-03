@@ -11,8 +11,8 @@ Y
 Y
 __EOF
 mysql -e "CREATE DATABASE IF NOT EXISTS testdb;"
-mysql -e "CREATE USER IF NOT EXISTS test@localhost IDENTIFIED BY 't3stp4ss';"
-mysql -e "GRANT ALL PRIVILEGES ON testdb.* TO test@localhost IDENTIFIED BY 't3stp4ss';"
+mysql -e "CREATE USER IF NOT EXISTS 'test'@'%' IDENTIFIED BY 't3stp4ss';"
+mysql -e "GRANT ALL PRIVILEGES ON testdb.* TO 'test'@'%' IDENTIFIED BY 't3stp4ss';"
 mysql -e "FLUSH PRIVILEGES;"
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO root@localhost;"
 mysql -e "ALTER USER root@localhost IDENTIFIED BY '1234';"
