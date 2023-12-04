@@ -1,3 +1,9 @@
+#
+#                      
+#	o._  _ _ .__|_o _ ._  
+#	|| |(_(/_|_)|_|(_)| | 
+#	         |            
+#
 FROM debian:bullseye
 RUN	apt-get -y update &&\
 	apt-get -y upgrade &&\

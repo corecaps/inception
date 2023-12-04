@@ -1,4 +1,10 @@
 #!/bin/sh
+#
+#                      
+#                      o._  _ _ .__|_o _ ._  
+#                      || |(_(/_|_)|_|(_)| | 
+#                               |            
+#
 /etc/init.d/mariadb start
 mysql_secure_installation << __EOF
 Y

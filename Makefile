@@ -1,8 +1,18 @@
+#
+#                      
+#                      o._  _ _ .__|_o _ ._  
+#                      || |(_(/_|_)|_|(_)| | 
+#                               |            
+#
 all:
-	mkdir -p ~/data/wordpress
-	mkdir -p ~/data/mariadb 
+	if [ ! -d ~/data/wordpress ]; then \
+		mkdir -p ~/data/wordpress; \
+	fi
+	if [ ! -d ~/data/mariadb ]; then \
+		mkdir -p ~/data/mariadb; \
+	fi
 	sudo hostsed add 127.0.0.1 jgarcia.42.fr
-	docker-compose build -f ./srcs/docker-compose.yml
+#	docker-compose build -f ./srcs/docker-compose.yml
 	docker-compose -f ./srcs/docker-compose.yml up --build -d
 
 clean:

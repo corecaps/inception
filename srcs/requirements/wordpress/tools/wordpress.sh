@@ -1,4 +1,10 @@
 #!/bin/sh
+#
+#                      
+#                      o._  _ _ .__|_o _ ._  
+#                      || |(_(/_|_)|_|(_)| | 
+#                               |            
+                               
 sleep 20
 rm -f /var/www/wordpress/wp-config.php
 wp-cli.phar config create --allow-root \
