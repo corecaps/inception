@@ -8,22 +8,22 @@
 sleep 20
 if [ ! -f /var/www/wordpress/wp-config.php ]; then \
 wp-cli.phar config create --allow-root \
-	--dbname=testdb \
-	--dbuser=test \
-	--dbpass=t3stp4ss \
+	--dbname=$DATABASE_NAME \
+	--dbuser=$DATABASE_USER \
+	--dbpass=$DATABASE_PASS \
 	--dbhost=mariadb:3306 \
 	--path='/var/www/wordpress'; \
 wp-cli.phar core install --title=inception\
-	--admin_user=toto \
-	--admin_password=toto \
-	--admin_email=toto@42.fr \
+	--admin_user=$WP_ADMIN_NAME \
+	--admin_password=$WP_ADMIN_PASS \
+	--admin_email=$WP_ADMIN_MAIL \
 	--path='/var/www/wordpress' \
 	--url='https://jgarcia.42.fr' \
 	--allow-root ; \
 wp-cli.phar user create \
-	tata \
-	tata@42.fr \
-	--user_pass=tata \
+	$WP_USER_NAME \
+	$WP_USER_MAIL \
+	--user_pass=$WP_USER_PASS \
 	--path=/var/www/wordpress \
 	--allow-root ; \
 fi
