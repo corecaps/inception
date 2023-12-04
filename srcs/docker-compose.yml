@@ -50,8 +50,8 @@ services:
     depends_on:
       - mariadb
     restart: on-failure
-    ports:
-      - "9000:9000"
+    expose:
+      - "9000"
 volumes:
   wordpress:
     driver: local
