@@ -48,7 +48,8 @@ services:
       context: requirements/wordpress
       dockerfile: Dockerfile
     depends_on:
-      - mariadb
+      mariadb:
+        condition: service_started
     restart: on-failure
     expose:
       - "9000"

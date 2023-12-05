@@ -5,6 +5,7 @@
 #                               |            
 #
 all:
+	@figlet _INCEPTION_
 	if [ ! -d ~/data/wordpress ]; then \
 		mkdir -p ~/data/wordpress; \
 	fi
@@ -29,7 +30,9 @@ fclean: clean
 re: fclean all
 
 ls:
-	docker image ls
-	docker ps
+	@figlet IMAGES
+	@docker image ls
+	@figlet RUNNING IMAGES
+	@docker ps
 
 .PHONY:all, clean, fclean, re, ls

@@ -4,7 +4,6 @@
 #                      o._  _ _ .__|_o _ ._  
 #                      || |(_(/_|_)|_|(_)| | 
 #                               |            
-                               
 sleep 20
 if [ ! -f /var/www/wordpress/wp-config.php ]; then \
 wp-cli.phar config create --allow-root \
